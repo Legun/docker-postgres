@@ -8,6 +8,6 @@ dependencies:
 
 test:
   override:
-    - docker build -t threew82/postgresql .
-    - docker run -d --name=postgresql threew82/postgresql; sleep 10
-    - docker run -it --volumes-from=postgresql threew82/postgresql sudo -u postgres -H psql -c "\conninfo"
+    - docker build -t threew82/postgres .
+    - docker run -d --name=postgresql threew82/postgres; sleep 10
+    - docker run -it --volumes-from=postgres threew82/postgres sudo -u postgres -H psql -c "\conninfo"
