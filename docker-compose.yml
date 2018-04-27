@@ -1,6 +1,6 @@
 PostgreSQL:
   restart: always
-  image: postgres:9.6
+  image: threew82/postgres:9.6-1
   ports:
     - "5432:5432"
   environment:
